@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+      </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de gorjetas</title>
+</head>
+<body>
+<div id="container">
+<div>
+    <h1 class="title">Calculadora de gorjetas</h1>
+</div>
+
+<div>
+    <form class="tipsForm" id="tipsForm">
+
+        <label for="bill">
+            <p>Quanto ficou a conta?</p>
+        </label>
+        <P>
+            R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput" Id="formInput" required > 
+        </P>
+
+ 
+        <label for="servicequality">
+            <P> Como foi seu serviço?</P>
+        </label>
+        <P>
+            <select name="servicequality" id="servicequality" class="formSelect"  required  >
+                <option disabled selected> escolha uma opção</option>
+                <option value="0.03" >30% - incrivel</option>
+                <option value="0.02" >20% - bom</option>
+                <option value="0.015" >15% - aceitável</option>
+                <option value="0.01" >10% - ruim</option>
+                <option value="0" >0% - péssimo</option>
+            </select>
+        </P>
+
+
+        <label for="people">
+            <p>Quantas pessoas dividirão a conta?</p>
+        </label>
+        <P>
+         <input type="number" placeholder="2" name="people" id="people" class="formInput" required > pessoa(s)
+        </P>
+
+
+        <button type="submit" class="formSubmit"> calcular</button>
+
+    </form>
+</div>
+<div id="totaltip">
+    Gorgeta total: 
+    R$<span id="tip">0.00</span>
+    <span id="each">cada </span>
+</div>
+
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
